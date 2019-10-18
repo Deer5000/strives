@@ -8,7 +8,8 @@
 
 <form action="/edit/{{book._id}}" method="POST">
     Name of book: <input type="text" name="name" value="{{book.name}}"><br>
-    Price of book: <input type="number" name="price" value="{{book.price}}"><br>
+    Pages in Book: <input type="number" name="price" value="{{book.price}}"><br>
+    In how many days would you like to read this book?(days): <input type="number" name="length"><br>
     Image URL: <input type="text" name="img_url" value="{{book.img_url}}"><br>
     <button type="submit">Submit</button><br>
 </form>

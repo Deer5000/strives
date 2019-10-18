@@ -32,6 +32,7 @@ def create_book():
         'length': request.form.get('length'),
         'img_url': request.form.get('img_url')
     }
+
     book_id = books_collection.insert_one(book).inserted_id
     page = book.get("pages", None)
     length = book.get("length", None)
@@ -59,7 +60,7 @@ def update_book(book_id):
     )
     return redirect(url_for('show_book', book_id=book_id))
 
-@app.route('/edit/<book_id>', methods=['GET'])
+@app.route('/edit/<book_id>', methods=['GET', 'POST'])
 def edit_book(book_id):
     """Page to submit an edit on a book."""
     book = books_collection.find_one({'_id': ObjectId(book_id)})

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>Strives App</title>
-    <link rel="stylesheet" src="static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
 </head>
 <body>
     {% block content %}{% endblock %}
