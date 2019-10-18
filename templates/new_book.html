@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="/">Back to Home</a>
+
+<h1>New Book</h1>
+
+<form action="/new" method="POST">
+    Name of Book: <input type="text" name="name"><br>
+    Pages in Book: <input type="number" name="pages"><br>
+    In how many days would you like to read this book?(days): <input type="number" name="length"><br>
+    Image URL: <input type="text" name="img_url"><br>
+    <button type="submit">Submit</button><br>
+</form>
+
+{% endblock %}

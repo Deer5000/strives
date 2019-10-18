@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="/">Back to Home</a>
+
+<h1>book: {{book.name}}</h1>
+
+<img src="{{book.img_url}}"><br>
+
+: {{book.pages}}
+Pages in book: {{book.pages}}
+days: {{book.length}}
+<h1>total: {{total}}</h1>
+<br><br>
+<a href="/edit/{{book._id}}">Edit Book</a>
+
+<br><br>
+<form action="/delete/{{book._id}}" method="POST">
+    <button type="submit">Delete Book</button>
+</form>
+
+{% endblock %}

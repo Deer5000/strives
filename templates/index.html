@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Strives App</h1>
+
+<a href="/new">New Book</a>
+
+<ul>
+{% for book in books %}
+
+    <li>
+        <a href="/book/{{book._id}}">{{book.name}}</a>
+    </li>
+
+{% endfor %}
+</ul>
+
+{% endblock %}
